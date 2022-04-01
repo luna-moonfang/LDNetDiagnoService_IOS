@@ -359,6 +359,9 @@
             }
         }
     } else {
+        // TODO: 判断网络类型(wifi/5g/4g等)的方案
+        return NETWORK_TYPE_WIFI;
+        // App called -statusBar or -statusBarWindow on UIApplication: this code must be changed as there's no longer a status bar or status bar window. Use the statusBarManager object on the window scene instead.
         NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"]
                               valueForKey:@"foregroundView"] subviews];
         NSNumber *dataNetworkItemView = nil;
